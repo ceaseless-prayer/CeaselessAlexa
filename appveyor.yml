@@ -1,0 +1,8 @@
+version: '{build}'
+image: Visual Studio 2017
+configuration: Release
+before_build:
+- cmd: dotnet restore
+test_script:
+- cmd: >-
+    dotnet test Ceaseless.Tests/Ceaseless.Tests.csproj
